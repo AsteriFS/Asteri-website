@@ -1,0 +1,38 @@
+.accordion {
+  .accordion-answer {
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  } 
+
+  .accordion-button svg {
+    transition: 0.2s;
+  }
+
+  .open {
+    .accordion-answer {
+      max-height: 1000px;
+      transition: max-height 1s ease-in-out;
+      svg {
+        color: #fff;
+        fill: #000;
+        transform: rotate(-90deg);
+      }
+      p{
+        opacity: 0;
+        transform: scale(0.9);
+        animation: 0.7s fadeIn;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+} 
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,11 +1,77 @@
-$body-color: blue;
+@import 'footer.scss';
 
-body{
-    background: $body-color;
+/* Please keep this css code to improve the font quality */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+  
+
+  
+/* border dash */
+.border-horizontal  {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
 }
 
-.example{
-    display: grid;
-    transition: all 0.2s;
-    user-select: none;
+.border-horizontal path{
+  fill: none;
+  stroke: #CFCCC8;
+  stroke-width: 2;
+  stroke-dasharray: 10, 10;
+}
+  
+  .first-section:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left:0px;
+    width: 100%;
+    height: 4rem;
+    background-color: #002A40;
+    z-index: -1;
+  }
+  
+  input[type="checkbox"]{
+    accent-color: #1D1D1D;
+  }
+  
+  .title-background-300:after{
+  position: absolute;
+    content: "";
+    width: 106%;
+    background-color: #fbf7f3;
+    border-radius: 3.75rem;
+    height: 70%;
+    bottom: 8%;
+    left: -3%;
+    z-index: -1;
+}
+  
+  /* first section border radius at the top */
+.first-section:before{
+    position: absolute;
+    top: -5.625rem;
+    left: 0px;
+    width: 100%;
+    height: 7.63rem;
+    border-radius: 3.75rem 3.75rem 0rem 0rem;
+    background: #FBF7F3;
+    z-index: 1;
+}
+@media screen and (max-width: 991px){
+  .first-section:before{
+    top: -4.625rem;
+  }
+}
+@media screen and (max-width: 568px){
+  .first-section:before{
+    height: 3.875rem;
+    border-radius: 1.875rem 1.875rem 0rem 0rem;
+    top: -3.375rem;
+  }
 }

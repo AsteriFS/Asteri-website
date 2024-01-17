@@ -1,0 +1,32 @@
+
+.footer-arrow-link {
+  &:after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://uploads-ssl.webflow.com/658ad13bc779dda3fb5777be/658c077bb700e733904124d6_footer-arrow-right.svg');
+    position: absolute;
+    right: 5px;
+    top: 0.3rem;
+    transition: all 0.2s;
+    height: 14px;
+    width: 14px;
+  }
+
+  &:hover:after{
+    right: 0px;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .footer_dark-wrapper{
+    padding-bottom: 3.25rem; 
+  }  
+
+  .footer_dark-credit{
+    bottom: 0px;
+    transform: translateX(-50%);
+    top: unset;
+  }
+}

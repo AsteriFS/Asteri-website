@@ -5,7 +5,7 @@ module.exports = {
   mode: "production",
   entry: {
     main: { import: './src/js/main.js' },
-    nesto: { import: './src/js/nesto.js' },
+    leverantorer: { import: './src/js/leverantorer.js' },
   }, 
   output: {
     clean: true,
