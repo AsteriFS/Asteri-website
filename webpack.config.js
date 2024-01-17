@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     main: { import: './src/js/main.js' },
     leverantorer: { import: './src/js/leverantorer.js' },
+    home: { import: './src/js/home.js' },
   }, 
   output: {
     clean: true,
