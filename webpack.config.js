@@ -7,6 +7,7 @@ module.exports = {
     main: { import: './src/js/main.js' },
     leverantorer: { import: './src/js/leverantorer.js' },
     home: { import: './src/js/home.js' },
+    nyheter: { import: './src/js/nyheter.js' },
   }, 
   output: {
     clean: true,

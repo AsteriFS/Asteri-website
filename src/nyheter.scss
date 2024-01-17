@@ -1,0 +1,5 @@
+/* Change category filter button color when checkbox is checked */
+.button:has(input[type="checkbox"]:checked){
+  color: #fff;
+  background-color: #000;
+}
