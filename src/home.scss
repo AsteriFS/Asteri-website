@@ -1,0 +1,94 @@
+
+/*************************
+ Hero
+*************************/
+.title-background-300:after{
+  position: absolute;
+  content: "";
+  width: 106%;
+  background-color: #fbf7f3;
+  border-radius: 3.75rem;
+  height: 70%;
+  bottom: 8%;
+  left: -3%;
+  z-index: -1;
+}
+
+.title-avatars{
+	display: inline-block;
+  height: 4.6rem;
+  width: 17.3rem;
+  &:after{
+    position: absolute;
+    content: "";
+    background-image: url('https://uploads-ssl.webflow.com/658ad13bc779dda3fb5777be/659d0a855dc4ababc5c9c927_hero-avatars.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10.37rem;
+    height: 3.875rem;
+    bottom: -3%;
+    right: 0;
+    @media screen and (max-width:767px){
+      width: 8.37rem;
+      height: 3.125rem;
+      bottom: 0%;
+    }
+  }
+  @media screen and (max-width:767px){
+    height: 3.125rem;
+    width: 12.3rem;
+  }
+}
+
+
+/*************************
+ Home marquee 
+*************************/
+.home_marquee {
+  user-select: none;
+}
+
+.home_marquee-content {
+  flex-shrink: 0;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 3.75rem)); /* match 1 rem to gap above */
+  }
+}
+
+/*************************
+ Illustration inside the title on the third section
+*************************/
+.text-illustration-before:before,
+.text-illustration-after:after{
+    position: absolute;
+    content: '';
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 7.125rem;
+    height: 4rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width:767px){
+      width: 4.6875rem;
+      height: 2.75rem;
+    }
+}
+
+.text-illustration-before:before{
+  background-image: url('https://uploads-ssl.webflow.com/659ffe3a536fa13ece86ec27/65a653b8bc6a37d77c3f53b8_handshake-illustration.svg');
+  left: 0px;
+}
+
+.text-illustration-after:after{
+  background-image: url('https://uploads-ssl.webflow.com/659ffe3a536fa13ece86ec27/65a65c29aa32b71080063b61_stars-illustration.svg');
+  right: 0px;
+}
