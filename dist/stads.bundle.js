@@ -1,0 +1,1 @@
+window.addEventListener("DOMContentLoaded",(function(){$(".w-dyn-bind-empty").parent(".section_city-services").each((function(){$(this).hide()}))}));

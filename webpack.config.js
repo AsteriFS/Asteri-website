@@ -8,6 +8,11 @@ module.exports = {
     leverantorer: { import: './src/js/leverantorer.js' },
     home: { import: './src/js/home.js' },
     nyheter: { import: './src/js/nyheter.js' },
+    medarbetare: { import: './src/js/medarbetare.js' },
+    karriar: { import: './src/js/karriar.js' },
+    karriarsArchive: { import: './src/js/karriarsArchive.js' },
+    stads: { import: './src/js/stads.js' },
+    services: { import: './src/js/services.js' },
   }, 
   output: {
     clean: true,
