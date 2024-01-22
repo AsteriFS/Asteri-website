@@ -1,4 +1,4 @@
-.accordion {
+[data-accordion="accordion"] {
   .accordion-answer {
     transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   } 
@@ -8,14 +8,16 @@
   }
 
   .open {
-    .accordion-answer {
-      max-height: 1000px;
-      transition: max-height 1s ease-in-out;
+    .accordion-question{
       svg {
         color: #fff;
         fill: #000;
         transform: rotate(-90deg);
       }
+    } 
+    .accordion-answer {
+      max-height: 1000px;
+      transition: max-height 1s ease-in-out;
       p{
         opacity: 0;
         transform: scale(0.9);

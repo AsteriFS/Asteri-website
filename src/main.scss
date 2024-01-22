@@ -60,3 +60,17 @@ input[type="checkbox"]{
   accent-color: #1D1D1D;
 }
 
+/*************************
+ Buttons
+*************************/
+.button{
+  p{
+    color: inherit;
+  }
+
+  &:hover{
+    .button-text-animated{
+      transform: translateY(-150%);
+    }
+  }
+}
