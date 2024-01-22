@@ -74,3 +74,8 @@ input[type="checkbox"]{
     }
   }
 }
+
+.arrow-right-button.is-secondary:hover,
+.arrow-right-up-button.is-secondary:hover{
+  border: 1px solid rgba(0, 42, 64, 0)
+}
