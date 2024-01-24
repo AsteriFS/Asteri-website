@@ -58,6 +58,8 @@
 *************************/
 input[type="checkbox"]{
   accent-color: #1D1D1D;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 /*************************
@@ -75,7 +77,13 @@ input[type="checkbox"]{
   }
 }
 
+.navbar-dropdown-button-wrapper:hover{
+  .arrow-right-button{
+    border: 1px solid rgba(0, 42, 64, 0);
+  }
+}
+
 .arrow-right-button.is-secondary:hover,
 .arrow-right-up-button.is-secondary:hover{
-  border: 1px solid rgba(0, 42, 64, 0)
+  border: 1px solid rgba(0, 42, 64, 0);
 }

@@ -1,6 +1,4 @@
-import '../accordion.scss'
 
-import './components/accordion.js'
 import './components/formCountryCode.js'
 
 
@@ -8,3 +6,6 @@ import './components/formCountryCode.js'
 $('.w-dyn-bind-empty').parents('.service-faq-list_item').each(function(){ 
   $(this).hide()
 })
+
+
+

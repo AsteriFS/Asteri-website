@@ -1,4 +1,8 @@
 import '../main.scss'
+import '../hamburger.scss'
+
+import './components/accordion.js'
+import './components/hamburger.js'
 
 // Adding titles to images
 $('img').each(function(){
