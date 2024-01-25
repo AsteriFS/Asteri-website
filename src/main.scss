@@ -87,3 +87,18 @@ input[type="checkbox"]{
 .arrow-right-up-button.is-secondary:hover{
   border: 1px solid rgba(0, 42, 64, 0);
 }
+
+/*************************
+ Text with background
+*************************/
+.title-background-300:after{
+  position: absolute;
+  content: "";
+  width: 106%;
+  background-color: #fbf7f3;
+  border-radius: 3.75rem;
+  height: 80%;
+  bottom: 0%;
+  left: -3%;
+  z-index: -1;
+}
