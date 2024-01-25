@@ -1,3 +1,8 @@
+// <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+
+//  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+
+
 let input = document.querySelector("#phone")
 let	dialCode = document.querySelector(".dialCode")
 let errorMsg = document.querySelector("#error-msg")

@@ -1,5 +1,4 @@
 import '../main.scss'
-import '../hamburger.scss'
 
 import './components/accordion.js'
 import './components/hamburger.js'
