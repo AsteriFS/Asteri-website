@@ -21,6 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // excerpt career description to 24 characters
 const excerpts = Array.from(document.querySelectorAll(".excerpt"));
 
-excerots.forEach(item => {
+excerpts.forEach(item => {
     item.innerText = item.innerText.slice(0, 24) + "...";
 })
