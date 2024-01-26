@@ -1,5 +1,7 @@
 import '../karriar.scss'
 
+import './components/excerpt.js'
+
 document.addEventListener('DOMContentLoaded', function () {
   let category = document.querySelectorAll('.collection-list input[type="checkbox"]');
   let allCategory = document.getElementById('all-categories');
@@ -18,9 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// excerpt career description to 24 characters
-const excerpts = Array.from(document.querySelectorAll(".excerpt"));
 
-excerpts.forEach(item => {
-    item.innerText = item.innerText.slice(0, 24) + "...";
-})
+
+
