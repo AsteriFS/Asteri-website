@@ -10,6 +10,7 @@ module.exports = {
     karriar: { import: './src/js/karriar.js' },
     stads: { import: './src/js/stads.js' },
     services: { import: './src/js/services.js' },
+    lokalvard: { import: './src/js/lokalvard.js' },
   }, 
   output: {
     clean: true,
