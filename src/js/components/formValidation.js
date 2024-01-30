@@ -1,13 +1,11 @@
 
 
-document.addEventListener("DOMContentLoaded", () => {
+
 		// SELECTORS
    
     const phoneForm = document.querySelector("#form-phone");
     const submitButton = document.querySelector("#form-submit");
-		if (!phoneForm || !submitButton) {
-        return;
-    }
+
 
 		// VARIABLES
     let emailIsValid = false;
@@ -61,5 +59,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		//EXECUTION
     updateSubmitButton();
-});
+
 
