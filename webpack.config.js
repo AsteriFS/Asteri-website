@@ -14,6 +14,7 @@ module.exports = {
     medarbetare: { import: './src/js/medarbetare.js' },
     leverantorer: { import: './src/js/leverantorer.js' },
     contactUs: { import: './src/js/contactUs.js' },
+    faOffert: { import: './src/js/faOffert.js' },
   }, 
   output: {
     clean: true,
