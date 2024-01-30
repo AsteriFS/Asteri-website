@@ -1,5 +1,6 @@
 
 import './components/excerpt.js'
+import './components/formValidation.js'
 
 
 // hide the city service section if the CMS with that condition is empty
