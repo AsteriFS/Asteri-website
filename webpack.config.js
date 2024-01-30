@@ -16,6 +16,8 @@ module.exports = {
     contactUs: { import: './src/js/contactUs.js' },
     faOffert: { import: './src/js/faOffert.js' },
     karriarTemplate: { import: './src/js/karriarTemplate.js' },
+    arbetsplatsservice: { import: './src/js/arbetsplatsservice.js' },
+    visselblasning: { import: './src/js/visselblasning.js' },
   }, 
   output: {
     clean: true,
