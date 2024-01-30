@@ -15,6 +15,7 @@ module.exports = {
     leverantorer: { import: './src/js/leverantorer.js' },
     contactUs: { import: './src/js/contactUs.js' },
     faOffert: { import: './src/js/faOffert.js' },
+    karriarTemplate: { import: './src/js/karriarTemplate.js' },
   }, 
   output: {
     clean: true,
