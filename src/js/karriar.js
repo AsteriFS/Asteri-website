@@ -109,8 +109,11 @@ import './components/formValidation.js'
         
         // Scroll to the top of the 'swiper-wrapper' element
         let swiperWrapper = document.querySelector('.swiper-wrapper');
+        let headerOffset = 120;
+        var swiperPosition = swiperWrapper.getBoundingClientRect().top;
+        var offsetPosition = swiperPosition + window.scrollY - headerOffset;
         window.scrollTo({
-          top: swiperWrapper.offsetTop - 120,
+          top: offsetPosition,
           behavior: 'smooth'
         });
 
@@ -132,8 +135,11 @@ import './components/formValidation.js'
 
     // Scroll to the top of the 'swiper-wrapper' element
     let swiperWrapper = document.querySelector('.swiper-wrapper');
+    let headerOffset = 120;
+    var swiperPosition = swiperWrapper.getBoundingClientRect().top;
+    var offsetPosition = swiperPosition + window.scrollY - headerOffset;
     window.scrollTo({
-      top: swiperWrapper.offsetTop - 120,
+      top: offsetPosition,
       behavior: 'smooth'
     });
 
