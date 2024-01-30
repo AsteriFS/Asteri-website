@@ -1,6 +1,7 @@
 import '../karriar.scss'
 
 import './components/excerpt.js'
+import './components/formValidation.js'
 
 
 
