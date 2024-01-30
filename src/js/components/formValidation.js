@@ -25,11 +25,11 @@ const applyValidStyle = (el) => {
 };
 const disableSubmitButton = () => {
     submitButton.disabled = true;
-    submitButton.classList.add("submit-disabled-state");
+    submitButton.classList.add("is-disabled");
 };
 const enableSubmitButton = () => {
     submitButton.disabled = false;
-    submitButton.classList.remove("submit-disabled-state");
+    submitButton.classList.remove("is-disabled");
 };
 const updateSubmitButton = () => {
     if (phoneIsValid) {

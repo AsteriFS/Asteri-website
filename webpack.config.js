@@ -13,6 +13,7 @@ module.exports = {
     lokalvard: { import: './src/js/lokalvard.js' },
     medarbetare: { import: './src/js/medarbetare.js' },
     leverantorer: { import: './src/js/leverantorer.js' },
+    contactUs: { import: './src/js/contactUs.js' },
   }, 
   output: {
     clean: true,
