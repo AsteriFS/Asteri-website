@@ -106,9 +106,14 @@ import './components/formValidation.js'
       if(direction === 'next'){
         slideNumber++
         swiper.slideNext();
-        var swiperWrapper = document.querySelector('.swiper-wrapper');
+        
         // Scroll to the top of the 'swiper-wrapper' element
-        swiperWrapper.scrollIntoView({ behavior: 'smooth' });
+        let swiperWrapper = document.querySelector('.swiper-wrapper');
+        window.scrollTo({
+          top: swiperWrapper.offsetTop - 120,
+          behavior: 'smooth'
+        });
+
         if(slideNumber === 2){
           document.querySelector('.contact-form-navigation-block .swiper-prev').style.display = 'flex';
           document.querySelector('.contact-form-navigation-block .swiper-prev').addEventListener('click', function(){
@@ -124,9 +129,14 @@ import './components/formValidation.js'
   function prevSlide(){
     slideNumber--
     swiper.slidePrev();
-    var swiperWrapper = document.querySelector('.swiper-wrapper');
+
     // Scroll to the top of the 'swiper-wrapper' element
-    swiperWrapper.scrollIntoView({ behavior: 'smooth' });
+    let swiperWrapper = document.querySelector('.swiper-wrapper');
+    window.scrollTo({
+      top: swiperWrapper.offsetTop - 120,
+      behavior: 'smooth'
+    });
+
     if(slideNumber === 1){
       document.querySelector('.contact-form-navigation-block .swiper-prev').style.display = 'none';
     } else {
