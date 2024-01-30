@@ -7,8 +7,7 @@
     const submitButton = document.querySelector("#form-submit");
 
 
-		// VARIABLES
-    let emailIsValid = false;
+	// VARIABLES
     let phoneIsValid = false;
 
 
@@ -35,7 +34,7 @@
         submitButton.classList.remove("submit-disabled-state");
     };
     const updateSubmitButton = () => {
-        if (emailIsValid && phoneIsValid) {
+        if (phoneIsValid) {
             enableSubmitButton();
         }
         else {
