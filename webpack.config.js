@@ -11,6 +11,7 @@ module.exports = {
     stads: { import: './src/js/stads.js' },
     services: { import: './src/js/services.js' },
     lokalvard: { import: './src/js/lokalvard.js' },
+    medarbetare: { import: './src/js/medarbetare.js' },
   }, 
   output: {
     clean: true,
