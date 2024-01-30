@@ -19,6 +19,7 @@ module.exports = {
     arbetsplatsservice: { import: './src/js/arbetsplatsservice.js' },
     visselblasning: { import: './src/js/visselblasning.js' },
     omOss: { import: './src/js/omOss.js' },
+    hotellservice: { import: './src/js/hotellservice.js' },
   }, 
   output: {
     clean: true,
