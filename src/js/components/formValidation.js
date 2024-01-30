@@ -13,7 +13,7 @@
 
 		// HELPER FUNCTIONS
     const validatePhone = (value) => {
-        const phoneValidation = /^(\+46)?\s*([7][0236])\s*(\d{4})\s*(\d{3})$/;
+        const phoneValidation = /^(\+46)?\s*(0[1-9][0-9])?\s*([0-9]{2,4})\s*([0-9]{2}\s*[0-9]{2})$/;
         if (value.match(phoneValidation)) {
             return true;
         }
