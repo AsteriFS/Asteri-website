@@ -1,3 +1,5 @@
+import '../omOss.scss'
+
 import './components/formValidation.js'
 
 

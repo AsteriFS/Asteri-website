@@ -1,0 +1,14 @@
+/*************************
+ Hero info section with small images of people
+*************************/
+.hero-template_info-content{
+    @media screen and (max-width: 1200px){
+      flex-direction: column;
+    }
+    @media screen and (max-width: 991px){
+      flex-direction: row;
+    }
+    @media screen and (max-width: 479px){
+      flex-direction: column;
+    }
+  }

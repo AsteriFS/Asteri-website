@@ -18,6 +18,7 @@ module.exports = {
     karriarTemplate: { import: './src/js/karriarTemplate.js' },
     arbetsplatsservice: { import: './src/js/arbetsplatsservice.js' },
     visselblasning: { import: './src/js/visselblasning.js' },
+    omOss: { import: './src/js/omOss.js' },
   }, 
   output: {
     clean: true,
