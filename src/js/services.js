@@ -1,4 +1,4 @@
-
+import './components/formValidation.js'
 
 
 
