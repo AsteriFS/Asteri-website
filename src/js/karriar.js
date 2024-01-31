@@ -1,6 +1,7 @@
 import '../karriar.scss'
 
 import './components/excerpt.js'
+import './components/formValidation.js'
 
 
 
@@ -105,9 +106,17 @@ import './components/excerpt.js'
       if(direction === 'next'){
         slideNumber++
         swiper.slideNext();
-        var swiperWrapper = document.querySelector('.swiper-wrapper');
+        
         // Scroll to the top of the 'swiper-wrapper' element
-        swiperWrapper.scrollIntoView({ behavior: 'smooth' });
+        let swiperWrapper = document.querySelector('.swiper-wrapper');
+        let headerOffset = 120;
+        var swiperPosition = swiperWrapper.getBoundingClientRect().top;
+        var offsetPosition = swiperPosition + window.scrollY - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+
         if(slideNumber === 2){
           document.querySelector('.contact-form-navigation-block .swiper-prev').style.display = 'flex';
           document.querySelector('.contact-form-navigation-block .swiper-prev').addEventListener('click', function(){
@@ -123,9 +132,17 @@ import './components/excerpt.js'
   function prevSlide(){
     slideNumber--
     swiper.slidePrev();
-    var swiperWrapper = document.querySelector('.swiper-wrapper');
+
     // Scroll to the top of the 'swiper-wrapper' element
-    swiperWrapper.scrollIntoView({ behavior: 'smooth' });
+    let swiperWrapper = document.querySelector('.swiper-wrapper');
+    let headerOffset = 120;
+    var swiperPosition = swiperWrapper.getBoundingClientRect().top;
+    var offsetPosition = swiperPosition + window.scrollY - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+
     if(slideNumber === 1){
       document.querySelector('.contact-form-navigation-block .swiper-prev').style.display = 'none';
     } else {
