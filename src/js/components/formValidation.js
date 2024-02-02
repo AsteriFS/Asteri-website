@@ -40,19 +40,22 @@ const updateSubmitButton = () => {
     }
 };
 
-
-phoneForm.addEventListener("input", (event) => {
-    const phoneFormValue = event.target.value;
-    if (validatePhone(phoneFormValue)) {
-        phoneIsValid = true;
-        applyValidStyle(phoneForm);
-    }
-    else {
-        phoneIsValid = false;
-        applyInvalidStyles(phoneForm);
-    }
-    updateSubmitButton();
-});
+if(phoneForm){
+    phoneForm.addEventListener("input", (event) => {
+        const phoneFormValue = event.target.value;
+        if (validatePhone(phoneFormValue)) {
+            phoneIsValid = true;
+            applyValidStyle(phoneForm);
+        }
+        else {
+            phoneIsValid = false;
+            applyInvalidStyles(phoneForm);
+        }
+        updateSubmitButton();
+    });
 
     //EXECUTION
-updateSubmitButton();
+    updateSubmitButton();
+}
+
+
