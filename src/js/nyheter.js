@@ -1,5 +1,7 @@
 import '../nyheter.scss'
 
+import './components/excerptSmall.js'
+
 document.addEventListener('DOMContentLoaded', function () {
   let category = document.querySelectorAll('.collection-list input[type="checkbox"]');
   let allCategory = document.getElementById('all-categories');
