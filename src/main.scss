@@ -126,3 +126,20 @@ input[type="checkbox"]{
   }
 }
 
+/*************************
+ Custom arrow for all select input fields
+*************************/
+.is-select-input{
+  appearance: none !important;
+   -webkit-appearance: none !important;
+   -moz-appearance: none !important;
+  background-image: url('https://uploads-ssl.webflow.com/65b2408505bafca1f20c51e1/65bcebb684b8b6f0060decc6_arrow-down.svg') !important;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 20px center;
+  background-clip: border-box;
+  -moz-background-clip: border-box;
+  -webkit-background-clip: border-box;
+}
+
+
