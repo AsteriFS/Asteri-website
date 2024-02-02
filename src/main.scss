@@ -88,6 +88,13 @@ input[type="checkbox"]{
   border: 1px solid rgba(0, 42, 64, 0);
 }
 
+
+.navbar-link-desktop:hover{
+  .navbar-link-desktop-underline{
+    max-width: 100%;
+  }
+}
+
 /*************************
  Text with background
 *************************/

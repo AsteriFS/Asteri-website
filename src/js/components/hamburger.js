@@ -66,3 +66,45 @@ navTabletChildNavigation.addEventListener('click', setOverflowYOnClick);
 
 hamburgerButton.addEventListener('click', setOverflowYOnClick);
 
+////////////
+// this observer will prevent page scroll if any of the nav-dropdown-wrappers are open
+////////////
+
+  // Function to handle changes in the DOM
+function handleMutation(mutationsList, observer) {
+    monitorNavDropdowns();
+}
+
+// Create a MutationObserver instance
+var observerElement = new MutationObserver(handleMutation);
+
+// Target elements with the class '.nav-dropdown-wrapper'
+var targetElements = document.querySelectorAll('.nav-dropdown-wrapper');
+
+// Configure the observer to watch for changes in attributes
+var observerConfig = { attributes: true, subtree: true };
+
+// Start observing the target elements
+targetElements.forEach(function (element) {
+    observerElement.observe(element, observerConfig);
+});
+
+// Function to monitor '.nav-dropdown-wrapper' elements
+function monitorNavDropdowns() {
+    var navDropdowns = document.querySelectorAll('.nav-dropdown-wrapper');
+    var shouldHideOverflow = true;
+
+    navDropdowns.forEach(function (dropdown) {
+        if (window.getComputedStyle(dropdown).display === 'flex') {
+            shouldHideOverflow = false;
+            return;
+        }
+    });
+
+    if (shouldHideOverflow) {
+        document.body.style.overflow = 'auto';
+    } else {
+        document.body.style.overflow = 'hidden';
+    }
+}
+  
