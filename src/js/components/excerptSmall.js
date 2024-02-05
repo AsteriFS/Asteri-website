@@ -2,5 +2,7 @@
 const excerptsSmall = Array.from(document.querySelectorAll(".excerpt-small"));
 
 excerptsSmall.forEach(item => {
-    item.innerText = item.innerText.slice(0, 40) + "...";
+    if (item.innerText.length > 40) {
+        item.innerText = item.innerText.slice(0, 40) + "...";
+    }
 })
