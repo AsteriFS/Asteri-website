@@ -20,6 +20,8 @@ module.exports = {
     visselblasning: { import: './src/js/visselblasning.js' },
     omOss: { import: './src/js/omOss.js' },
     hotellservice: { import: './src/js/hotellservice.js' },
+    personuppgiftspolicy: { import: './src/js/personuppgiftspolicy.js' },
+    cookiePolicy: { import: './src/js/cookiePolicy.js' },
   }, 
   output: {
     clean: true,
