@@ -5,8 +5,7 @@ import './components/formValidation.js'
 
 
 
-
-  let category = document.querySelectorAll('.collection-list input[type="checkbox"]');
+  let category = document.querySelectorAll('.news-category-filter-cms input[type="checkbox"]');
   let allCategory = document.getElementById('all-categories');
 
   function handleCheckboxChange() {
