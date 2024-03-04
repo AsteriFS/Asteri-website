@@ -5,12 +5,20 @@
 }
 
 .contact-form-navigation-block .swiper-prev{
-  display: none;
+  visibility: hidden;
+}
+
+.swiper-prev.prev-button{
+  display: flex;
+}
+
+.contact-form-navigation-block .swiper-prev-laststep{
+  visibility: visible !important;
 }
 
 
 .swiper-slide{
   .contact-form-block:last-of-type{
-    margin-bottom: none;
+    margin-bottom: 0;
   }
 }

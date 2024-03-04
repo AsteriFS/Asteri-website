@@ -4,9 +4,7 @@ import './components/excerpt.js'
 import './components/formValidation.js'
 
 
-
-
-  let category = document.querySelectorAll('.collection-list input[type="checkbox"]');
+  let category = document.querySelectorAll('.news-category-filter-cms input[type="checkbox"]');
   let allCategory = document.getElementById('all-categories');
 
   function handleCheckboxChange() {
@@ -31,7 +29,7 @@ import './components/formValidation.js'
   });
 
   let nextButton = document.querySelector('.swiper-next');
-  let prevButton = document.querySelector('.swiper-prev');
+  let prevButtons = document.querySelectorAll('.swiper-prev');
   let slideNumber = 1;
 
   function checkFields(direction){
@@ -118,12 +116,9 @@ import './components/formValidation.js'
         });
 
         if(slideNumber === 2){
-          document.querySelector('.contact-form-navigation-block .swiper-prev').style.display = 'flex';
-          document.querySelector('.contact-form-navigation-block .swiper-prev').addEventListener('click', function(){
-            prevSlide();
-          });
+          document.querySelector('#swiper-prev').style.visibility = 'visible';
         } else {
-          document.querySelector('.contact-form-navigation-block').style.display = 'none';
+          document.querySelector('.contact-form-prev-next').style.display = 'none';
         }
       } 
      }
@@ -144,9 +139,11 @@ import './components/formValidation.js'
     });
 
     if(slideNumber === 1){
-      document.querySelector('.contact-form-navigation-block .swiper-prev').style.display = 'none';
+      document.querySelector('#swiper-prev').style.visibility = 'hidden';
     } else {
-      document.querySelector('.contact-form-navigation-block').style.display = 'block';
+      document.querySelector('.contact-form-prev-next').style.display = 'block';
+      document.querySelector('#swiper-prev').style.visibility = 'visible';
+
     }
   }
 
@@ -155,9 +152,12 @@ import './components/formValidation.js'
     checkFields('next')
   });
 
-  prevButton.addEventListener('click', function() {
-    prevSlide()
-  });
+  prevButtons.forEach(function(prevButton) {
+    // Attach event listener to each prevButton
+    prevButton.addEventListener('click', function() {
+        prevSlide(); 
+    });
+});
 
 
 

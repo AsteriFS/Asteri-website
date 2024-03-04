@@ -22,6 +22,7 @@ module.exports = {
     hotellservice: { import: './src/js/hotellservice.js' },
     personuppgiftspolicy: { import: './src/js/personuppgiftspolicy.js' },
     cookiePolicy: { import: './src/js/cookiePolicy.js' },
+    nyheterSingle: { import: './src/js/nyheterSingle.js' },
   }, 
   output: {
     clean: true,
