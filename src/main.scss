@@ -151,4 +151,38 @@ input[type="checkbox"]{
 	stroke-linecap: initial;
 }
 
+/*************************
+ Code for text mask animation
+*************************/
+.word {
+  position: relative;
+}
+.line-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fbf7f3;
+  opacity: 0.8;
+  height: 110%;
+  width: 100%;
+  z-index: 2;
+}
+  
+/*************************
+ code for preenting animated text and images flashing before animation script is loaded
+*************************/
+[data-attribute='reveal-on-scroll']{
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+[data-attribute='right-to-left']{
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+[data-attribute='left-to-right']{
+  opacity: 0;
+  transform: translateY(-50px);
+}
 

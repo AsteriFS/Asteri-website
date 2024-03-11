@@ -2,6 +2,10 @@ import '../main.scss'
 
 import './components/accordion.js'
 import './components/hamburger.js'
+import './animations/revealOnScroll.js'
+import './animations/textOverlay.js'
+import './animations/lenisSmoothScroll.js'
+import './animations/imageLeftRight.js'
 
 // Adding titles to images
 $('img').each(function(){
