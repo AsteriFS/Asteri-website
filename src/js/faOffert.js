@@ -40,3 +40,23 @@ const checkboxes = document.querySelectorAll('input[type="checkbox"][id^="checkb
 checkboxes.forEach((checkbox) => {
     checkbox.addEventListener('click', handleCheckboxClick);
 });
+
+///////////////////////////////////////////////
+// code for enhanced conversion tracking
+///////////////////////////////////////////////
+const form = document.getElementById('wf-form-Fa-offert');
+form.addEventListener('submit', function(event) {
+  // Get the email and phone number values from the form inputs
+  const email = document.getElementById('mail').value;
+  const phoneNumber = document.getElementById('phone-number').value;
+
+
+  // Push data to the dataLayer
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    'event': 'offer_form_completion',
+    'email': email,
+    'phone_number': phoneNumber
+  });
+
+});

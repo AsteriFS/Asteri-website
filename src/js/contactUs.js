@@ -1,5 +1,9 @@
 import './components/formValidation.js'
 
+
+///////////////////////////////////////////////
+// code for enhanced conversion tracking
+///////////////////////////////////////////////
 const form = document.getElementById('wf-form-Kontakta-oss');
 form.addEventListener('submit', function(event) {
   // Get the email and phone number values from the form inputs
