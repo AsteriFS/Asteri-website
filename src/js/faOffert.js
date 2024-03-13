@@ -47,8 +47,8 @@ checkboxes.forEach((checkbox) => {
 const form = document.getElementById('wf-form-Fa-offert');
 form.addEventListener('submit', function(event) {
   // Get the email and phone number values from the form inputs
-  const email = document.getElementById('mail').value;
-  const phoneNumber = document.getElementById('phone-number').value;
+  const email = document.getElementById('Email-3').value;
+  const phoneNumber = document.getElementById('form-phone').value;
 
 
   // Push data to the dataLayer
