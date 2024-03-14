@@ -2,7 +2,7 @@
 let revealContainers = document.querySelectorAll("[data-attribute='left-to-right'], [data-attribute='right-to-left']");
 
 revealContainers.forEach((container) => {
-  let image = container.querySelector("img");
+  let images = container.querySelectorAll("img");
   let dataAttribute = container.dataset.attribute;
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -19,22 +19,26 @@ revealContainers.forEach((container) => {
       xPercent: -100,
       ease: Power2.out
     });
-    tl.from(image, 1, {
-      xPercent: 100,
-      scale: 1.3,
-      delay: -1,
-      ease: Power2.out
+    images.forEach((image) => { 
+      tl.from(image, 1, {
+        xPercent: 100,
+        scale: 1.3,
+        delay: -1,
+        ease: Power2.out
+      });
     });
   } else if (dataAttribute === "right-to-left") { // Move from right to left
     tl.from(container, 1, {
       xPercent: 100,
       ease: Power2.out
     });
-    tl.from(image, 1, {
-      xPercent: -100,
-      scale: 1.3,
-      delay: -1,
-      ease: Power2.out
+    images.forEach((image) => { 
+      tl.from(image, 1, {
+        xPercent: -100,
+        scale: 1.3,
+        delay: -1,
+        ease: Power2.out
+      });
     });
   }
 });
