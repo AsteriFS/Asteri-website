@@ -1,3 +1,4 @@
+
 // Select elements with data-attribute "left-to-right" or "right-to-left"
 let revealContainers = document.querySelectorAll("[data-attribute='left-to-right'], [data-attribute='right-to-left']");
 
@@ -15,40 +16,33 @@ revealContainers.forEach((container) => {
   
   // Check the data-attribute value and apply animations accordingly
   if (dataAttribute === "left-to-right") { // Move from left to right
-    tl.fromTo(container, 1, {
+    tl.from(container, {
+      duration: 1,
       xPercent: -100,
       ease: Power2.out
-    }, { 
-      xPercent: 0 
     });
-    images.forEach((image) => { 
-      tl.fromTo(image, 1, {
+    images.forEach((image) => {
+      tl.from(image, {
+        duration: 1,
         xPercent: 100,
         scale: 1.3,
-        delay: -1,
         ease: Power2.out
-      }, {
-        xPercent: 0,
-        scale: 1
-      });
+      }, "-=1"); // Animation starts 1 second after the container animation starts
     });
-  } else if (dataAttribute === "right-to-left") { // Move from right to left
-    tl.fromTo(container, 1, {
+  } 
+  else if (dataAttribute === "right-to-left") {
+  	tl.from(container, {
+      duration: 1,
       xPercent: 100,
       ease: Power2.out
-    }, {
-      xPercent: 0 
     });
-    images.forEach((image) => { 
-      tl.fromTo(image, 1, {
+    images.forEach((image) => {
+      tl.from(image, {
+        duration: 1,
         xPercent: -100,
         scale: 1.3,
-        delay: -1,
         ease: Power2.out
-      }, {
-        xPercent: 0,
-        scale: 1,
-      });
+      }, "-=1"); // Animation starts 1 second after the container animation starts
     });
-  }
+  };
 });
