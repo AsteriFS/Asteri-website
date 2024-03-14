@@ -9,8 +9,8 @@ setTimeout(() => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: element,
-            start: 'top 80%', // Adjust this value to change when the animation starts
-            end: 'bottom 20%', // Adjust this value to change when the animation ends
+            start: 'top 90%', // Adjust this value to change when the animation starts
+            end: 'bottom 10%', // Adjust this value to change when the animation ends
             toggleActions: 'play none none reverse', // Reverse the animation when the element leaves the viewport
             markers: false // For debugging, can be removed
         }
