@@ -15,29 +15,39 @@ revealContainers.forEach((container) => {
   
   // Check the data-attribute value and apply animations accordingly
   if (dataAttribute === "left-to-right") { // Move from left to right
-    tl.from(container, 1, {
+    tl.fromTo(container, 1, {
       xPercent: -100,
       ease: Power2.out
+    }, { 
+      xPercent: 0 
     });
     images.forEach((image) => { 
-      tl.from(image, 1, {
+      tl.fromTo(image, 1, {
         xPercent: 100,
         scale: 1.3,
         delay: -1,
         ease: Power2.out
+      }, {
+        xPercent: 0,
+        scale: 1
       });
     });
   } else if (dataAttribute === "right-to-left") { // Move from right to left
-    tl.from(container, 1, {
+    tl.fromTo(container, 1, {
       xPercent: 100,
       ease: Power2.out
+    }, {
+      xPercent: 0 
     });
     images.forEach((image) => { 
-      tl.from(image, 1, {
+      tl.fromTo(image, 1, {
         xPercent: -100,
         scale: 1.3,
         delay: -1,
         ease: Power2.out
+      }, {
+        xPercent: 0,
+        scale: 1,
       });
     });
   }
