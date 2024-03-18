@@ -5,11 +5,13 @@ const body = document.body;
 // Function to be executed when the "active" class is added
 const activateCode = () => {
     body.style.overflow = 'hidden';
+    lenis.stop();
 };
 
 // Function to be executed when the "active" class is removed
 const deactivateCode = () => {
     body.style.overflow = 'auto';
+    lenis.start();
 };
 
 // Create a new MutationObserver
@@ -103,8 +105,10 @@ function monitorNavDropdowns() {
 
     if (shouldHideOverflow) {
         document.body.style.overflow = 'auto';
+        lenis.stop();
     } else {
         document.body.style.overflow = 'hidden';
+        lenis.start();
     }
 }
   
