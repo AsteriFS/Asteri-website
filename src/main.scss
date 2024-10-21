@@ -154,17 +154,19 @@ input[type="checkbox"]{
 /*************************
  Code for text mask animation
 *************************/
-.word {
+
+[data-attribute='mask-text'] .line{
   position: relative;
 }
+
 .line-mask {
-  position: absolute;
-  top: 0;
-  right: 0;
   background-color: #fbf7f3;
-  opacity: 0.8;
   height: 110%;
-  width: 100%;
+  opacity: .8;
+  position: absolute;
+  right: -1%;
+  top: 0;
+  width: 102%;
   z-index: 2;
 }
   

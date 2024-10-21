@@ -1,36 +1,46 @@
-let typeSplit;
+setTimeout(() => {
+  function runSplit() {
+    // Target each element with data-attribute='mask-text'
+    document.querySelectorAll("[data-attribute='mask-text']").forEach(element => {
+      // Split the text for each element
+      const typeSplit = new SplitType(element, {
+        types: "lines"
+      });
 
-// Split the text up
-// add data-attribute 'mask-text' to the element
-function runSplit() {
-  typeSplit = new SplitType("[data-attribute='mask-text']", {
-    types: "lines, words"
-  });
-  $(".word").append("<div class='line-mask'></div>");
-  createAnimation();
-}
+      // Add line mask to each word
+      element.querySelectorAll(".line").forEach(word => {
+        const lineMask = document.createElement('div');
+        lineMask.classList.add('line-mask');
+        word.appendChild(lineMask);
+      });
 
-runSplit();
+      // Create animation for each element
+      createAnimation(element);
+    });
+  }
 
+  function createAnimation(element) {
+    // Select all line masks for the given element
+    const allMasks = Array.from(element.querySelectorAll(".line .line-mask"));
 
-// Create staggered animation
-function createAnimation() {
-  let allMasks = $(".word").map(function() {
-    return $(this).find(".line-mask");
-  }).get();
+    // Create a timeline for the given element
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+        start: "top 90%",
+        end: "bottom 80%",
+        scrub: 1,
+      }
+    });
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "[data-attribute='mask-text']",
-      start: "top center",
-      end: "bottom center",
-      scrub: 1
-    }
-  });
+    // Animate the line masks
+    tl.to(allMasks, {
+      width: "0%",
+      duration: 0.5,
+      stagger: 0.5
+    });
+  }
 
-  tl.to(allMasks, {
-    width: "0%",
-    duration: 1,
-    stagger: 0.5
-  });
-}
+  // Run the split and animation setup
+  runSplit();
+}, 1000);
